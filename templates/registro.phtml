@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+
+    <!--link css-->
+    <link rel="stylesheet" href="CSS/formStyle.css">
+
+</head>
+
+<body>
+    <div class="tituloRegistro">
+        <?php
+        echo "<h2>Datos del formulario de registro:</h2>";
+        ?>
+    </div>
+    <div class="registro">
+        <?php
+        $validacion = ["NOMBRE: " . $nombre = $_POST['nombre'], "APELLIDO: " . $apellido = $_POST['apellido'], "EMAIL: " . $email = $_POST['email'], "CONTRASEÑA: " . $password = $_POST['password']];
+
+        echo "<ul>";
+        for ($i = 0; $i < count($validacion); $i++) {
+            if (isset($_POST['nombre']) && !empty($_POST['nombre'])) {
+                $validar = $validacion[$i];
+                echo "<li>$validar</li>";
+            } else {
+                echo "<h2>Error! Por favor, completar todos los datos</h2>";
+            }
+        }
+        echo "</ul>";
+        ?>
+    </div>
+</body>
+
+</html>

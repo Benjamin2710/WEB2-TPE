@@ -1,0 +1,29 @@
+<?php if (isset($_SESSION['USER_ID'])) : ?>
+  <h3 class="mb-3">+ Agregar autor/a:</h3>
+
+  <form action="agregarAutor" method="POST" class="row g-3 d-flex justify-content-between align-items-end">
+    <div class="col-md-2">
+
+      <label for="nombre" class="form-label">Apellido y Nombre:</label>
+      <input type="text" class="form-control" name="nombre" placeholder="Apellido y Nombre">
+    </div>
+
+    <div class="col-md-2">
+      <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
+      <input type="date" class="form-control" name="fecha_nacimiento">
+    </div>
+
+    <div class="col-md-2">
+      <label for="nacionalidad" class="form-label">Nacionalidad del autor/a:</label>
+      <input type="text" class="form-control" name="nacionalidad">
+    </div>
+
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
+
+  </form>
+
+<?php else : ?>
+  <h4 class="mb-3">NOTA: Debe estar logueado para editar</h4>
+<?php endif ?>

@@ -1,0 +1,103 @@
+body {
+    background-image: url("../IMG/libreria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80% 10%;
+    height: 100vh;
+    align-items: center;
+}
+
+h1 {
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    text-align: center;
+}
+
+.logo {
+    position: fixed;
+    justify-content: left;
+    align-items: left;
+}
+.menú {
+    width: 100%;
+    position: right;
+    z-index: 1000;
+    top:0;
+}
+.header {
+    display: grid;
+    background: gainsboro;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top:0;
+}
+  
+nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+  
+nav ul li {
+    float: right;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background: rgba(4, 15, 114, 0.781);
+}
+
+a:link, a:visited { 
+    color: black;
+    text-decoration: none;
+}
+
+h3 {
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.información {
+    color: gainsboro;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+footer {
+    background: gainsboro;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+/*desktop*/
+@media only screen and (min-width: 1024px)  {
+
+    .box{
+        height: 100%;
+    }
+    /*box de productos*/
+    .box1{
+        height: 70%;
+    }
+}

@@ -1,0 +1,32 @@
+<?php require 'templates/header.phtml' ?>
+
+<h1 class="display-5 text-center">Libros disponibles</h1>
+<ul class="list-group" id="list_textos">
+  <?php foreach ($textos as $texto) { ?>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><?= $texto->nombre ?></h4>
+          <p>Autor/a: <?= $texto->nombre_autor ?></p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="d-flex justify-content-end align-items-end">
+            <a href="texto/<?= $texto->id_texto ?>" class="btn btn-secondary">Ver Detalles</a>
+            <?php if (isset($_SESSION['USER_ID'])) : ?>
+              <a href="formModificarTexto/<?= $texto->id_texto ?>" class="btn btn-primary ms-2">Modificar</a>
+              <a href="eliminarTexto/<?= $texto->id_texto ?>" type="button" class="btn btn-danger ms-2">Eliminar</a>
+            <?php endif ?>
+          </div>
+        </div>
+      </div>
+    </li>
+  <?php } ?>
+</ul>
+
+<?php if (isset($_SESSION['USER_ID'])) : ?>
+  <h3 class="mb-3">+ Agregar nuevo libro:</h3>
+<?php require_once 'templates/FormularioAgregar.phtml';
+else : ?>
+  <h4 class="mb-3">NOTA: Debe estar logueado para editar</h4>
+<?php require 'templates/footer.phtml';
+endif ?>

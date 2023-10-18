@@ -1,0 +1,20 @@
+<footer>
+    <div class="contacto">
+        <?php
+        $contactanos = "Contactanos:";
+        $listaContactos = ['<a href="https://mail.google.com/mail">
+                <link rel="icon" href=""><img src="IMG/gmail.png" alt="" width="20px" height="20px"> libreriaVirtual@gmail.com
+                </a>', '<img src="IMG/telefono.png" alt="" width="20px" height="20px"> (249) 212483'];
+
+        echo "<h3>$contactanos</h3>";
+
+        echo "<ul>";
+        for ($i = 0; $i < count($listaContactos); $i++) {
+            $listaContacto = $listaContactos[$i];
+            echo "<li>$listaContacto</li>";
+        }
+        echo "</ul>";
+        ?>
+
+    </div>
+</footer>

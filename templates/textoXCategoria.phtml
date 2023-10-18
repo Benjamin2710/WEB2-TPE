@@ -1,0 +1,32 @@
+<?php require 'templates/header.phtml' ?>
+
+<table class='table table-hover'>
+    <thead>
+        <tr>
+            <th>#ID</th>
+            <th>Libro</th>
+            <th>Autor/a</th>
+            <th>Categoría</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($textos as $texto) : ?>
+            <tr>
+                <td><?= $texto->id ?></td>
+                <td><?= $texto->texto ?></td>
+                <td><?= $texto->autor ?></td>
+                <td><?= $texto->Nombre ?></td>
+
+                <?php if (isset($_SESSION['USER_ID'])) : ?>
+                    <td>
+                        <a href="editar/<?= $texto->id ?>" type="button" class="btn btn-dark">Editar</a>
+                        <a href="eliminar/<?= $texto->id ?>" type="button" class="btn btn-dark">Eliminar</a>
+                    </td>
+                <?php endif ?>
+
+            </tr>
+        <?php endforeach ?>
+    </tbody>
+</table>
+<p class="mt-3"><small>TOTAL: <?= $count ?> libros</small></p>
+<?php require 'templates/footer.phtml' ?>

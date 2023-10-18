@@ -1,0 +1,22 @@
+<ul>
+
+  <?php foreach ($autores as $autor) { ?>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-md-6">
+
+          <h4> <a href="autor/<?= $autor->id_autor ?>" class="btn btn-primary"><?= $autor->nombre ?></a></h4>
+        </div>
+
+        <?php if (isset($_SESSION['USER_ID'])) : ?>
+          <div class="col-md-6 text-md-end">
+            <div class="d-flex justify-content-end align-items-end">
+              <a href="formModificarAutor/<?= $autor->id_autor ?>" class="btn btn-primary ms-2">Modificar</a>
+              <a href="solicitudEliminarAutor/<?= $autor->id_autor ?>" type="button" class="btn btn-danger ms-2">Eliminar autor/a</a>
+            </div>
+          </div>
+        <?php endif ?>
+      </div>
+    </li>
+  <?php } ?>
+</ul>

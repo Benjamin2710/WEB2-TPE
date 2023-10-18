@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATE</title>
+
+    <!--link css-->
+    <link rel="stylesheet" href="CSS/formStyle.css">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <?php require 'templates/header1.phtml' ?>
+
+        <div class="box">
+            <div class="datos">
+                <h2>REGISTRATE:</h2>
+
+                <form action="templates/registro.phtml" method="POST">
+                    Nombre: <input type="text" name="nombre" placeholder="Ingrese nombre">
+                    Apellido: <input type="text" name="apellido" placeholder="Ingrese apellido">
+                    Email: <input type="text" name="email" placeholder="Ingrese email">
+                    Contraseña: <input type="password" name="password" placeholder="Ingrese contraseña">
+
+                    <button type="submit">REGISTRARME</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
