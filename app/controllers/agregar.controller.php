@@ -6,6 +6,7 @@ require_once './app/helpers/auth.helper.php';
 
 class AgregarController {
     private $view;
+    
     private $model;
 
     function __construct(){
