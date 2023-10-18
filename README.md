@@ -2,7 +2,7 @@
 Toledo Lopez, María Agustina - agustina.toledolopez@gmail.com
 D'Annunzio, Benjamín - dannunzio98@gmail.com
 
-Temática: Librería virtual
+Temática: Librería Virtual
 
 Los usuarios se conectan a la página donde pueden buscar libros por autores, temáticas u otros aspectos. De ahí serán conectados a la base de datos con los resultados, que les brindará información sobre lo buscado: cuántos ejemplares hay del libro, cuál es su precio de mercado, y qué otros libros del autor/a ofrece la tienda.
 
